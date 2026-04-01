@@ -9,6 +9,7 @@
 _Keep track of your inventory of 3D-printer filament spools._
 
 In this one i expanded the extruder_temp with a extruder_min_temp & extruder_max_temp as well the bed-temp with min_temp and max_temp. 
+Also i have a tutorial of how to set it up for http use or with https as well at the sametime for local usage.
 
 Spoolman is a self-hosted web service designed to help you efficiently manage your 3D printer filament spools and monitor their usage. It acts as a centralized database that seamlessly integrates with popular 3D printing software like [OctoPrint](https://octoprint.org/) and [Klipper](https://www.klipper3d.org/)/[Moonraker](https://moonraker.readthedocs.io/en/latest/). When connected, it automatically updates spool weights as printing progresses, giving you real-time insights into filament usage.
 
