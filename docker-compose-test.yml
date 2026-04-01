@@ -1,0 +1,18 @@
+services:
+  spoolman-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spoolman-test
+    ports:
+      - "9000:8000"
+    environment:
+      - SPOOLMAN_DIR_DATA=/home/app/spoolman_test_data
+      - SPOOLMAN_DIR_BACKUPS=/home/app/spoolman_test_data/backups
+      - SPOOLMAN_DIR_LOGS=/home/app/spoolman_test_data
+    volumes:
+      - spoolman_test_data:/home/app/spoolman_test_data
+    restart: unless-stopped
+
+volumes:
+  spoolman_test_data:
