@@ -74,17 +74,7 @@ function App() {
     fetchLocale().catch(console.error);
   }, [i18n.language]);
 
-  if (!import.meta.env.VITE_APIURL) {
-    return (
-      <>
-        <h1>Missing API URL</h1>
-        <p>
-          App was built without an API URL. Please set the VITE_APIURL environment variable to the URL of your Spoolman
-          API.
-        </p>
-      </>
-    );
-  }
+
 
   return (
     <BrowserRouter basename={getBasePath() + "/"}>

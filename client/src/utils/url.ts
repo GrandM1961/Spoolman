@@ -28,8 +28,10 @@ export function getBasePath(): string {
  * @return {string} The API URL
  */
 export function getAPIURL(): string {
-  if (!import.meta.env.VITE_APIURL) {
-    throw new Error("VITE_APIURL is not set");
+  // If VITE_APIURL is set at build time, use it
+  if (import.meta.env.VITE_APIURL) {
+    return getBasePath() + import.meta.env.VITE_APIURL;
   }
-  return getBasePath() + import.meta.env.VITE_APIURL;
+  // Otherwise use relative URL to the current origin
+  return getBasePath() + "/api/v1";
 }
